@@ -1,6 +1,8 @@
 # Weather-App
 Weather App using the OpenWeatherMap API.
 
+Get location, temperature, temperature info, and temperature icon.
+
 Click on the Temperature Degree to get the temperature in Celsius.
 
 ## <a href="https://distracted-roentgen-09d74c.netlify.app/">Weather App</a>
