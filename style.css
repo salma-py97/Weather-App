@@ -13,21 +13,37 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 }
-
-.location,
-.temperature{
-    height: 30vh;
+.location {
+    min-height: 30vh;
     width: 50%;
+    position: relative;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-between;
     align-items: center;
 }
+.location .location-timezone {
+    flex-basis: 60%;
+}
+.location .weather-icon{
+    flex-basis: 40%;
+}
+.location .weather-icon > img{
+    display: block;
+    position: relative;
+    animation: move 5s linear infinite;
+}
 .temperature{
+    height: 30vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
     flex-direction: column;
     justify-content: space-around;
     margin-top: 2rem;
 }
+
 .degree{
     display: flex;
     align-items: center;
@@ -39,9 +55,31 @@ body{
     font-size: 40px;
 }
 .degree span{
-    margin-top: 20px;
+    margin-top: -20px;
     font-weight: 600;
 }
-.weather-icon{
-    margin-left: auto;
+
+@media screen and (max-width: 678px) {
+    .location .location-timezone {
+        flex-basis: 100%;
+    }
+    .location .weather-icon{
+        flex-basis: 100%;
+    }
+}
+
+@keyframes move {
+    0% {
+        left: 70%;
+        transform: translateX(-70%);
+    }
+    50% {
+        left: 90%;
+        transform: translateX(-90%);
+    }
+    100% {
+        left: 70%;
+        transform: translateX(-70%);
+    }
+
 }

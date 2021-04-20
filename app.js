@@ -27,6 +27,7 @@ window.addEventListener('load', () => {
             fetch(api)
                 .then(res => res.json())
                 .then(data => {
+                    console.log(data);
                     const temp = data.main.temp;
                     const weather = data.weather[0];
                     const description = weather.main + ', ' + weather.description;
